@@ -198,12 +198,14 @@ img {
     font-size: 60px;
     color: #000000;
 }
+
 .BeneficiosContainer h1 span {
     color: #FFA665;
 }
 
 .BeneficiosContainer {
     margin: 20px auto;
+    margin-top: 50px;
     max-width: 1200px;
     background-color: #fff;
     border-radius: 10px;
@@ -235,12 +237,13 @@ img {
     transition: all 0.3s ease; /* Smooth transition for all properties */
 }
 
-.texto-adicional {
+.Beneficio-texto-adicional {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(255, 165, 101); /* Slightly transparent background */
+    background-color: #FFA665; /* Slightly transparent background */
+    color: white;
     text-align: center;
     padding: 10px;
     border-radius: 5px;
@@ -251,41 +254,18 @@ img {
     z-index: 10; /* Ensure it is above other elements */
 }
 
-.Beneficio.expanded {
-    min-height: auto; /* Automatically adjust based on content */
-    max-width: 200px;
-    height: auto; /* Automatically adjust based on content */
-}
-
-.Beneficio.expanded .texto-adicional {
+.Beneficio.expanded .Beneficio-texto-adicional {
     opacity: 1; /* Make visible */
     pointer-events: auto; /* Enable interaction */
-    height: auto; /* Ensure the text can expand */
 }
 
-#Primero {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-#Segundo {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-#Tercero {
-    grid-area: 3 / 1 / 4 / 2;
-}
-
-#Cuarto {
-    grid-area: 1 / 4 / 2 / 5;
-}
-
-#Quinto {
-    grid-area: 2 / 4 / 3 / 5;
-}
-
-#Sexto {
-    grid-area: 3 / 4 / 4 / 5;
-}
+/* Specific grid areas for Beneficios */
+#Primero { grid-area: 1 / 1 / 2 / 2; }
+#Segundo { grid-area: 2 / 1 / 3 / 2; }
+#Tercero { grid-area: 3 / 1 / 4 / 2; }
+#Cuarto { grid-area: 1 / 4 / 2 / 5; }
+#Quinto { grid-area: 2 / 4 / 3 / 5; }
+#Sexto { grid-area: 3 / 4 / 4 / 5; }
 
 .Ilustracion {
     grid-column: 2 / 4;
@@ -293,11 +273,12 @@ img {
 }
 
 .Ilustracion img {
-    width: 1000px; /* Ajusta al 100% del contenedor */
+    width: 100%; /* Ajusta al 100% del contenedor */
     height: auto;
     border-radius: 10px;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .BeneficiosCartas {
         grid-template-columns: 1fr;
@@ -307,7 +288,7 @@ img {
     .Ilustracion {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        order: -1; /* Mover la ilustración a la parte superior en pantallas más pequeñas */
+        order: -1; /* Move the illustration to the top on smaller screens */
     }
 
     .Beneficio {
@@ -315,34 +296,36 @@ img {
     }
 }
 
-/*Testimonios*/
-
-.TestimoniosContenedor{
+/*Testimonio*/
+.TestimoniosContenedor {
     background-color: white;
     padding: 20px;
-    margin:20px auto;
+    margin: 20px auto;
     max-width: 1200px; /* Limitar el ancho máximo */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
-.TestimoniosContenedor h1{
+
+.TestimoniosContenedor h1 {
     text-align: center;
     font-size: 30px;
     color: black;
 }
-.TestimoniosContenedor h1 span{
-    color:#FFA665;
+
+.TestimoniosContenedor h1 span {
+    color: #FFA665;
 }
 
-.CartasTestimonio{
+.CartasTestimonio {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     justify-items: center;
     align-items: center;
     margin-top: 20px;
 }
-.Testimonio{
+
+.Testimonio {
     background-color: #FFA665;
     text-align: center;
     border-radius: 10px;
@@ -351,10 +334,48 @@ img {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    position: relative; /* Necesario para el texto adicional */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
+.Testimonio img {
+    border-radius: 10px; /* Ajuste para la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.Testimonio-texto-adicional {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFA665;
+    height: 250px; /* Slightly transparent background */
+    color: white;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Prevent interaction */
+    transition: opacity 2s ease; /* Smooth transition for opacity */
+    z-index: 10; /* Ensure it is above other elements */
+}
+
+.Testimonio:hover .Testimonio-texto-adicional {
+    opacity: 1; /* Make visible on hover */
+    pointer-events: auto; /* Enable interaction on hover */
+}
+
+.Testimonio.expanded .Testimonio-texto-adicional {
+    opacity: 1; /* Keep visible when expanded */
+    pointer-events: auto;
+    height: 250px; /* Enable interaction when expanded */
+}
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .CartasTestimonios {
+    .CartasTestimonio {
         grid-template-columns: 1fr;
     }
 }

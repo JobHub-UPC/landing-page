@@ -60,15 +60,15 @@
         <div class="BeneficiosContainer">
             <h1>Nuestros <span>Beneficios</span></h1>
             <div class="BeneficiosCartas">
-                <div class="Beneficio" onmouseover="mostrartexto(this,'Gracias a nuestro avanzado sistema de algoritmos, JobHub ofrece recomendaciones personalizadas basadas en tus habilidades y preferencias, asegurando que siempre recibas las mejores oportunidades laborales adecuadas a tu perfil.')" onmouseout="ocultartexto(this)" id="Primero">Sugerencia Personalizada de Empleos <div class="texto-adicional"></div>
+                <div class="Beneficio" onmouseover="Beneficio_Mostrartexto(this,'Gracias a nuestro avanzado sistema de algoritmos, JobHub ofrece recomendaciones personalizadas basadas en tus habilidades y preferencias, asegurando que siempre recibas las mejores oportunidades laborales adecuadas a tu perfil.')" onmouseout="Beneficio_Ocultartexto(this)" id="Primero">Sugerencia Personalizada de Empleos <div class="Beneficio-texto-adicional"></div>
                 </div>
-                <div class="Beneficio" onmouseover="mostrartexto(this,'Mantente informado con actualizaciones en tiempo real sobre el estado de tus postulaciones. Recibe notificaciones instantáneas cuando haya cambios importantes o cuando sea el momento de actuar.')" onmouseout="ocultartexto(this)" id="Segundo">Actualización Constante de Postulación<div class="texto-adicional"></div></div>
-                <div class="Beneficio" onmouseover="mostrartexto(this,'Facilita el proceso de selección con entrevistas directamente a través de nuestra plataforma. Coordina, agenda y realiza entrevistas sin salir de JobHub, optimizando el tiempo tanto para candidatos como para empleadores.')" onmouseout="ocultartexto(this)" id="Tercero">Entrevistas por la Página<div class="texto-adicional"></div></div>
+                <div class="Beneficio" onmouseover="Beneficio_Mostrartexto(this,'Mantente informado con actualizaciones en tiempo real sobre el estado de tus postulaciones. Recibe notificaciones instantáneas cuando haya cambios importantes o cuando sea el momento de actuar.')" onmouseout="Beneficio_Ocultartexto(this)" id="Segundo">Actualización Constante de Postulación<div class="Beneficio-texto-adicional"></div></div>
+                <div class="Beneficio" onmouseover="Beneficio_Mostrartexto(this,'Facilita el proceso de selección con entrevistas directamente a través de nuestra plataforma. Coordina, agenda y realiza entrevistas sin salir de JobHub, optimizando el tiempo tanto para candidatos como para empleadores.')" onmouseout="Beneficio_Ocultartexto(this)" id="Tercero">Entrevistas por la Página<div class="Beneficio-texto-adicional"></div></div>
                 <div class="Ilustracion"><img src="img/Beneficios.png" alt="JobHub"></div>
-                <div class="Beneficio" onmouseover="mostrartexto(this,'Nuestra herramienta de filtración avanzada ayuda a los empleadores a identificar rápidamente a los candidatos más cualificados, ahorrando tiempo y recursos en el proceso de selección.')" onmouseout="ocultartexto(this)" id="Cuarto">Filtración de Postulantes<div class="texto-adicional"></div></div>
-                <div class="Beneficio" onmouseover="mostrartexto(this,'Simplifica y acelera tu proceso de postulación con nuestra plataforma intuitiva y dinámica. Aplica a múltiples empleos con un solo clic, incrementando tus posibilidades de éxito.')" onmouseout="ocultartexto(this)" id="Quinto">Postulaciones Rápidas y Dinámicas<div class="texto-adicional"></div></div>
-                <div class="Beneficio" onmouseover="mostrartexto(this,'Amplía tu red profesional con nuestra funcionalidad de conexión de contactos. Encuentra y conecta con profesionales del sector, facilitando futuras colaboraciones y oportunidades laborales.')" onmouseout="ocultartexto(this)" id="Sexto">Conexión de Contactos<div class="texto-adicional"></div></div>
-                <script src="Js/HoverContenedor.js"></script>
+                <div class="Beneficio" onmouseover="Beneficio_Mostrartexto(this,'Nuestra herramienta de filtración avanzada ayuda a los empleadores a identificar rápidamente a los candidatos más cualificados, ahorrando tiempo y recursos en el proceso de selección.')" onmouseout="Beneficio_Ocultartexto(this)" id="Cuarto">Filtración de Postulantes<div class="Beneficio-texto-adicional"></div></div>
+                <div class="Beneficio" onmouseover="Beneficio_Mostrartexto(this,'Simplifica y acelera tu proceso de postulación con nuestra plataforma intuitiva y dinámica. Aplica a múltiples empleos con un solo clic, incrementando tus posibilidades de éxito.')" onmouseout="Beneficio_Ocultartexto(this)" id="Quinto">Postulaciones Rápidas y Dinámicas<div class="Beneficio-texto-adicional"></div></div>
+                <div class="Beneficio" onmouseover="Beneficio_Mostrartexto(this,'Amplía tu red profesional con nuestra funcionalidad de conexión de contactos. Encuentra y conecta con profesionales del sector, facilitando futuras colaboraciones y oportunidades laborales.')" onmouseout="Beneficio_Ocultartexto(this)" id="Sexto">Conexión de Contactos<div class="Beneficio-texto-adicional"></div></div>
+                <script src="Js/BeneficioHoverContenedor.js"></script>
                 
             </div>
         </div>
@@ -78,12 +78,14 @@
         <div class="TestimoniosContenedor"> 
             <h1>Ellos <span>confiaron</span> en nosotros...</h1>
             <div class="CartasTestimonio">
-            <div class="Testimonio">
+            <div class="Testimonio" onmouseover="Testimonio_Mostrartexto(this,'JobHub me ha ayudado a encontrar el trabajo de mis sueños. La sugerencia personalizada de empleos realmente se ajusta a mis habilidades y preferencias. ¡Recomiendo esta plataforma a todos los profesionales en búsqueda de nuevas oportunidades!')"onmouseout="Testimonio_Ocultartexto(this)">
                 <img src="img/Maria Lopez.jpg" alt="" height="200px">
-                María López, Diseñadora Gráfica</div>
-            <div class="Testimonio"><img src="img/Carlos Perez.jpg" alt="" height="200px">Carlos Pérez, Desarrollador Web</div>
-            <div class="Testimonio"><img src="img/Ana.jpg" alt="" height="200px">Ana García, Recursos Humanos</div>
-            </div>
+                María López, Diseñadora Gráfica<div class="Testimonio-texto-adicional"></div></div>
+            <div class="Testimonio" onmouseover="Testimonio_Mostrartexto(this,'Gracias a la actualización constante de postulación, siempre supe en qué estado estaba mi proceso. Además, las entrevistas por la página hicieron todo mucho más sencillo y rápido. ¡Excelente herramienta!')"onmouseout="Testimonio_Ocultartexto(this)"><img src="img/Carlos Perez.jpg" alt="" height="200px">Carlos Pérez, Desarrollador Web <div class="Testimonio-texto-adicional"></div></div>
+            <div class="Testimonio" onmouseover="Testimonio_Mostrartexto(this,'Como reclutadora, JobHub ha revolucionado mi manera de trabajar. La filtración de postulantes y las postulaciones rápidas y dinámicas me han permitido encontrar y contratar al talento adecuado en tiempo récord.')"onmouseout="Testimonio_Ocultartexto(this)"><img src="img/Ana.jpg" alt="" height="200px">Ana García, Recursos Humanos<div class="Testimonio-texto-adicional"></div></div>
+            <script src="Js/TestimonioHoverContenedor.js"></script>
+        </div>
+
         </div>
 
     </section>
