@@ -160,57 +160,6 @@ img {
     cursor: pointer;
     white-space: nowrap; 
 } 
-/* Sección de Beneficios */
-.BeneficiosContainer h1 {
-    text-align: center;
-    font-size: 60px;
-    color: #000000;
-}
-.BeneficiosContainer h1 span {
-    color: #FFA665;
-}
-
-.BeneficiosContainer {
-    margin: 20px auto;
-    max-width: 1200px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.BeneficiosCartas {
-    display: grid;
-    grid-template-columns: repeat(5, 5);
-    grid-template-rows: repeat(3, 4);
-    gap: 10px;
-    justify-items: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.Beneficio {
-    background-color: #FFA665;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    min-width: 150px;
-    max-width: 200px;
-}
-
-.Ilustracion {
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
-}
-
-.Ilustracion img {
-    width: 800px;  /* Ajusta al 100% del contenedor */
-    height: auto;
-    border-radius: 10px;
-}
-
 @media (max-width:991px) {
     .menu {
         padding: 20px;
@@ -243,6 +192,112 @@ img {
     }
 
 }
+/* Sección de Beneficios */
+.BeneficiosContainer h1 {
+    text-align: center;
+    font-size: 60px;
+    color: #000000;
+}
+.BeneficiosContainer h1 span {
+    color: #FFA665;
+}
+
+.BeneficiosContainer {
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.BeneficiosCartas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Beneficio {
+    background-color: #FFA665;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    min-height: 100px;
+    min-width: 100px;
+    max-width: 200px;
+    position: relative;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.texto-adicional {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 165, 101); /* Slightly transparent background */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Prevent interaction */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    z-index: 10; /* Ensure it is above other elements */
+}
+
+.Beneficio.expanded {
+    min-height: auto; /* Automatically adjust based on content */
+    max-width: 200px;
+    height: auto; /* Automatically adjust based on content */
+}
+
+.Beneficio.expanded .texto-adicional {
+    opacity: 1; /* Make visible */
+    pointer-events: auto; /* Enable interaction */
+    height: auto; /* Ensure the text can expand */
+}
+
+#Primero {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#Segundo {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#Tercero {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#Cuarto {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+#Quinto {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+#Sexto {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.Ilustracion {
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+}
+
+.Ilustracion img {
+    width: 1000px; /* Ajusta al 100% del contenedor */
+    height: auto;
+    border-radius: 10px;
+}
+
 @media (max-width: 768px) {
     .BeneficiosCartas {
         grid-template-columns: 1fr;
@@ -256,6 +311,6 @@ img {
     }
 
     .Beneficio {
-        min-width: 80%;
+        min-width: 40%;
     }
 }
