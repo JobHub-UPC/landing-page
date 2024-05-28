@@ -308,12 +308,13 @@ img {
 
 .TestimoniosContenedor h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
     color: black;
 }
 
 .TestimoniosContenedor h1 span {
     color: #FFA665;
+    font-size: 50px;
 }
 
 .CartasTestimonio {
@@ -378,4 +379,56 @@ img {
     .CartasTestimonio {
         grid-template-columns: 1fr;
     }
+}
+
+/*Seccion casos*/
+.CasoEstudioContenedor{
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+.CasoEstudioContenedor h1{
+    text-align: center;
+    font-size: 60px;
+}
+.CasoEstudioContenedor span{
+    color: #FFA665;
+}
+.Casos .Caso {
+    display: none; /* Oculta todos los casos */
+    background-color: #FFA665;
+    text-align: center;
+    min-height: 300px;
+    min-width: 500px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    align-items: center; 
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease-in-out; /* Transición de opacidad */
+}
+.CartasCasos{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+}
+.Casos .Caso.active {
+    display: block; /* Muestra solo el primer caso */
+    opacity: 1;
+}
+.flecha {
+    cursor: pointer; /* Estilo del cursor como puntero para indicar acción */
+    background: none; /* Remueve el fondo para botones */
+    border: none; /* Remueve el borde del botón */
+}
+.ContenedorFlecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Caso p{
+    padding-top:15px ;
 }
