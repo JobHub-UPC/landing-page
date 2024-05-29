@@ -30,15 +30,20 @@ body {
 img {
     max-width: 100%;
 }
+
 .container {
-    max-width: 1440px; /*ancho máx*/
-    margin: 0 24px; /*márgen arriba/abajo = 0 - izq/der = auto*/
+    max-width: 1200px; /*ancho máx*/
+    margin: 0 auto; /*márgen arriba/abajo = 0 - izq/der = auto*/
 }
 
 .menu {
     position: absolute;
+    left: 0;
+    right: 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    margin-left: 24px;
 }
 
 .logo {
@@ -57,14 +62,16 @@ img {
 }
 
 .menu .navbar ul li {
-    margin: 0 20px;
-   
+    position: relative;
+    float: left;
 }
 
 .menu .navbar ul li a {
-    font-size: 20px;
+    font-size: 18px;
+    padding: 25px;
     color: #ffffff;
-    font-weight:400;
+    display: block;
+    font-weight: 400;
 }
 
 #menu {
@@ -92,7 +99,7 @@ img {
 }
 
 .btnIniciar {
-    margin-left: 280px;
+    margin-left: 220px;
     background-color: transparent; /*fondo transparente*/
     border: 2px solid #f5f4f0; 
     color: white; /* Color del texto */
@@ -113,10 +120,11 @@ img {
     background-color: #dbd7d7;
 }
 
+
 .information-content {
     display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+    justify-content: center;
+    margin-top: 100px;
 }
 
 .information-img1 {
@@ -206,6 +214,86 @@ img {
   
 }
 
+/*Equipo*/
+
+.team-container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.team-container h2 {
+    margin-bottom: 20px;
+    color: #0f4c81;
+    font-size: 30px;
+    font-weight: 600;
+}
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    padding: 50px;
+    width: 900px;
+    text-align: left;
+    transition: opacity 0.9s ease-in-out;
+    opacity: 0;
+}
+
+.card.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.photo-placeholder {
+    width: 190px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.role-placeholder {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    flex-grow: 1;
+    margin-right: 50px;
+}
+
+.nav-arrow {
+    cursor: pointer;
+    margin: 0 30px;
+    width: 40px;
+    transition: transform 0.2s;
+}
+
+.nav-arrow:hover {
+    transform: scale(1.1);
+}
+
 
 /*Para celu*/
 @media (max-width:991px) {
@@ -239,6 +327,17 @@ img {
         display: initial;
     }
 
+    .menu .navbar ul {
+        flex-direction: column;
+        
+    }
+
+    .btnIniciar, .btnUnirse {
+        display: none;
+    }
+
+    /*Nosotros*/
+
     .our-container {
         flex-direction: column;
     }
@@ -250,5 +349,25 @@ img {
     .img-our {
         margin-top: 80px;
     }
+
+    .card {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center;
+    }
+
+    .card-left {
+        margin-right: 0;
+        margin-bottom: 20px; /* Añade margen debajo de la imagen */
+    }
+
+    .card-right {
+        text-align: center;
+    }
+
+    .nav-arrow {
+        height: 30px; /* Ajusta el tamaño de las flechas si es necesario */
+        width: 30px;
+    }
+
 
 }
