@@ -585,8 +585,18 @@ img {
 
 .price {
     font-size: 1em;
-    color: #333;
+    color: #33333369;
     margin-bottom: 20px;
+}
+
+.suscripcion-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFA665;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 /*Para celu*/
