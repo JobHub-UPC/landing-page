@@ -599,6 +599,10 @@ img {
     transition: background-color 0.3s;
 }
 
+.suscripcion-button:hover {
+    background-color: #ffbb8b;
+}
+
 /*Para celu*/
 @media (max-width:991px) {
     .menu {
