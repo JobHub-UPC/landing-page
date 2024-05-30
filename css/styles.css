@@ -573,6 +573,22 @@ img {
     margin-bottom: 10px;
 }
 
+.precio-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.precio-card ul li {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
 /*Para celu*/
 @media (max-width:991px) {
     .menu {
