@@ -1,10 +1,485 @@
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
+
+
+* { /*estilos universal*/
+    margin: 0; /*márgenes*/
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
+
+html {
+    scroll-behavior: smooth;
+    scroll-timeline: 0.9s; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /*Tipografía del cuerpo*/
+    background-color: #f5f4f0;
+}
+
+.header {
+    background-color: #0f4c81;
+    display: flex;
+    min-height: 95px; /*altura mínima*/
+    justify-content: space-between;
+    align-items: center;    
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px; /*ancho máx*/
+    margin: 0 auto; /*márgen arriba/abajo = 0 - izq/der = auto*/
+}
+
+.menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 24px;
+}
+
+.logo {
+    display: flex;
+    color: #ffffff;    
+    font-family: 'Poppins', bold;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.menu .navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 25px;
+    color: #ffffff;
+    display: block;
+    font-weight: 400;
+}
+
+#menu {
+    display: none;
+}
+.menu-icon {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.btnIniciar, .btnUnirse {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif; /*Tipo de letra*/
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasas por encima */
+    border-radius: 50px; /*redondeo de borde*/
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    white-space: nowrap; /*Para que sea una sola linea*/
+}
+
+.btnIniciar {
+    margin-left: 220px;
+    background-color: transparent; /*fondo transparente*/
+    border: 2px solid #f5f4f0; 
+    color: white; /* Color del texto */
+}
+
+.btnUnirse {
+    margin-left: 20px;
+    background-color: #ffffff;
+    border: 2px solid transparent; /* borde transparente */
+    color: #0f4c81; 
+}
+
+.btnIniciar:hover {
+    background-color: #2187c2ad;
+}
+
+.btnUnirse:hover {
+    background-color: #dbd7d7;
+}
+
+
+.information-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.information-img1 {
+    width: 800px;
+    height: 100%;
+    margin-right: 30px;
+}
+
+.information-b1 {
+    padding: 50px;
+    text-align: left;
+}
+
+.information-1 p {
+    font-size: 35px;
+    color: #2c2c2c;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.information-img1 img {
+    width: 800px;
+    height: 100%;
+}
+
+.search-content {
+    margin-left: 20px;
+}
+
+.search-container {
+    display: flex;
+    padding: 20px ;
+    background-color: #ffffff;
+    border: 2px solid #0f4c81;
+    border-radius: 50px;
+}
+
+.search-input {
+    border: 2px solid #2c2c2c5d;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #0f4c81;
+}
+
+.search-button {
+    background-color: #0f4c81;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap; 
+} 
+
+.our-container {
+    background-color: #0f4c81;
+    color: #f5f4f0;
+    text-align: justify;
+    padding: 60px 80px;
+    margin-top: 12%;
+}
+
+.our-container h3 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.our-content {
+    display: flex; /*Diseño flexible*/
+    flex-wrap: wrap; /*Se distribuyen de acuerdo al espacio*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+.our-container p {
+    font-size: 20px;
+    font-weight: 300;
+    max-width: 50%;
+}
+
+.img-our {
+    max-width: 45%;
+    height: auto;
+  
+}
+
+/*Equipo*/
+
+.team-container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.team-container h2 {
+    margin-bottom: 20px;
+    color: #0f4c81;
+    font-size: 30px;
+    font-weight: 600;
+}
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    padding: 50px;
+    width: 900px;
+    text-align: left;
+    transition: opacity 0.9s ease-in-out;
+    opacity: 0;
+}
+
+.card.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.photo-placeholder {
+    width: 190px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.role-placeholder {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    flex-grow: 1;
+    margin-right: 50px;
+}
+
+.nav-arrow {
+    cursor: pointer;
+    margin: 0 30px;
+    width: 40px;
+    transition: transform 0.2s;
+}
+
+.nav-arrow:hover {
+    transform: scale(1.1);
+}
+
+/* Sección de Beneficios */
+.BeneficiosContainer h1 {
+    text-align: center;
+    font-size: 60px;
+    color: #000000;
+}
+.BeneficiosContainer h1 span {
+    color: #FFA665;
+}
+
+.BeneficiosContainer {
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.BeneficiosCartas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Beneficio {
+    background-color: #FFA665;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    min-height: 100px;
+    min-width: 100px;
+    max-width: 200px;
+    position: relative;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.texto-adicional {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 165, 101); /* Slightly transparent background */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Prevent interaction */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    z-index: 10; /* Ensure it is above other elements */
+}
+
+.Beneficio.expanded {
+    min-height: auto; /* Automatically adjust based on content */
+    max-width: 200px;
+    height: auto; /* Automatically adjust based on content */
+}
+
+.Beneficio.expanded .texto-adicional {
+    opacity: 1; /* Make visible */
+    pointer-events: auto; /* Enable interaction */
+    height: auto; /* Ensure the text can expand */
+}
+
+#Primero {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#Segundo {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#Tercero {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#Cuarto {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+#Quinto {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+#Sexto {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.Ilustracion {
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+}
+
+.Ilustracion img {
+    width: 1000px; /* Ajusta al 100% del contenedor */
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/*Testimonio*/
+.TestimoniosContenedor {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    margin-top: 80px;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.TestimoniosContenedor h1 {
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+
+.TestimoniosContenedor h1 span {
+    color: #FFA665;
+}
+
+.CartasTestimonio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Testimonio {
+    background-color: #FFA665;
+    text-align: center;
+    border-radius: 10px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative; /* Necesario para el texto adicional */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.Testimonio img {
+    border-radius: 10px; /* Ajuste para la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.Testimonio-texto-adicional {
+    position: absolute;
+    width: 100%;
+    background-color: #FFA665;
+    height: 250px; /* Slightly transparent background */
+    color: white;
+    text-align: justify;
+    font-size: 15px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start hidden */
+    pointer-events: none; /* Prevent interaction */
+    transition: opacity 2s ease; /* Smooth transition for opacity */
+    z-index: 10; /* Ensure it is above other elements */
+}
+
+.Testimonio:hover .Testimonio-texto-adicional {
+    opacity: 1; /* Make visible on hover */
+    pointer-events: auto; /* Enable interaction on hover */
+}
+
+.Testimonio.expanded .Testimonio-texto-adicional {
+    opacity: 1; /* Keep visible when expanded */
+    pointer-events: auto;
+    height: 250px; /* Enable interaction when expanded */
+}
+
+
+/*Seccion Galeria*/
 
 section {
     padding: 40px 20px;
@@ -103,6 +578,9 @@ section {
     display: none;
 }
 
+ 
+/*Contacto y FAQ*/
+
 .contacto h1 {
     font-size: 28px;
     margin-bottom: 20px;
@@ -154,4 +632,149 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+/*Seccion casos*/
+.CasoEstudioContenedor{
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+.CasoEstudioContenedor h1{
+    text-align: center;
+    font-size: 60px;
+}
+.CasoEstudioContenedor span{
+    color: #FFA665;
+}
+.Casos .Caso {
+    display: none; /* Oculta todos los casos */
+    background-color: #FFA665;
+    text-align: center;
+    min-height: 300px;
+    min-width: 500px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    align-items: center; 
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease-in-out; /* Transición de opacidad */
+}
+.CartasCasos{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+}
+.Casos .Caso.active {
+    display: block; /* Muestra solo el primer caso */
+    opacity: 1;
+}
+.flecha {
+    cursor: pointer; /* Estilo del cursor como puntero para indicar acción */
+    background: none; /* Remueve el fondo para botones */
+    border: none; /* Remueve el borde del botón */
+}
+.ContenedorFlecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Caso p{
+    padding-top:15px ;
+}
+
+/*Para celu*/
+@media (max-width:991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #837357df ;
+        
+        display: none;
+    }
+
+    .menu .navbar ul li a:hover {
+        color:#2c2c2c;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .menu .navbar ul {
+        flex-direction: column;
+        
+    }
+
+    .btnIniciar, .btnUnirse {
+        display: none;
+    }
+
+    /*Nosotros*/
+
+    .our-container {
+        flex-direction: column;
+    }
+
+    .our-content p, .img-our {
+        max-width: 100%;
+    }
+
+    .img-our {
+        margin-top: 80px;
+    }
+
+    .card {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center;
+    }
+
+    .card-left {
+        margin-right: 0;
+        margin-bottom: 20px; /* Añade margen debajo de la imagen */
+    }
+
+    .card-right {
+        text-align: center;
+    }
+
+    .nav-arrow {
+        height: 30px; /* Ajusta el tamaño de las flechas si es necesario */
+        width: 30px;
+    }
+    .BeneficiosCartas {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .Ilustracion {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        order: -1; /* Mover la ilustración a la parte superior en pantallas más pequeñas */
+    }
+
+    .Beneficio {
+        min-width: 40%;
+    }
+
+    .CartasTestimonio {
+        grid-template-columns: 1fr;
+    }
 }
