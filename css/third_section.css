@@ -1,0 +1,80 @@
+.testimonios-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.testimonios-container span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #9A351B; /* Color del texto del título */
+}
+
+.testimonios-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre flechas y tarjetas */
+
+}
+
+.testimonios-flech img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.testimonios-carts {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Ancho del contenedor de las tarjetas */
+}
+
+.testimonios-carts {
+    min-height: 400px; /* Altura mínima de las tarjetas */
+    margin: 0 10px; /* Espacio entre las tarjetas */
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    text-align: center;
+}
+
+.testimonios-carts img {
+    width: 135;
+    height: 132px;
+    margin-bottom: 10px;
+}
+
+.testimonios-carts p {
+    line-height: 1.5;
+    font-size: 12px; 
+    padding: 0 5px;
+}
+
+/* Estilos para las tarjetas con fondo blanco */
+.testimonio-cart-impar {
+    height: 350px;
+    background-color: #ffffff;
+    color: #000000; /* Color del texto de las tarjetas blancas */
+}
+
+
+.testimonio-cart-impar img {
+    filter: grayscale(100%); /* Aplicar filtro de escala de grises a las imágenes en tarjetas blancas */
+}
+
+.testimonio-cart-par{
+    background-color: #D55737;
+    height: 350px;
+    color: #ffffff;
+    
+}
+.testimonio-imagen{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.testimonio-cart-par img{
+    filter: grayscale(100%);
+}

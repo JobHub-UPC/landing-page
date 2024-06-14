@@ -1,0 +1,31 @@
+.sponsors-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap:35px
+}
+.sponsors-container span{
+color: #9A351B;
+font-size: 30px;
+font-weight: 600;
+}
+.sponsors-content{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+
+}
+.sponsor-cart{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+.sponsor img{
+    height: 130px;
+    width: 240px;
+    
+}
+.sponsor-flech{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}

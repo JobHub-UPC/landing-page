@@ -1,0 +1,64 @@
+.information-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Corrección: usar justify-content en lugar de justify-items */
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* Estilos para el texto y elementos internos */
+.information-first {
+    color: #9A351B;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.information-second {
+    margin-top: 30px;
+    color: #9A351B;
+    font-size: 30px;
+}
+
+.information-third {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Diseño de la cuadrícula para el contenido */
+.information-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Estilo de la imagen */
+.information-image {
+    display: flex;
+    justify-content: end; /* Alinear la imagen a la derecha */
+}
+
+.information-content img {
+    margin-right: 50px;  
+    width: 400px; /* Ajustar el tamaño de la imagen según sea necesario */
+}
+
+/* Estilo de la información */
+.information-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 100px; /* Espaciado derecho para el contenido de texto */
+}
+
+.information-info span {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.information-info button {
+    text-align: center;
+    margin-left: 0;
+    width: auto; /* Ajustar el ancho del botón al tamaño del texto */
+}

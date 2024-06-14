@@ -1,0 +1,45 @@
+    .presentation-container{
+        background-color: #E3734B;
+        width: 100%;
+        height: 380px;
+    }
+
+    .presentation-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .presentation-img1 {
+        width: 800px;
+        height: 100%;
+        margin-right: 30px;
+    }
+
+    .presentation-b1 {
+        padding: 50px;
+        text-align: left;
+    }
+
+    .presentation-1 p {
+        font-size: 35px;
+        color: #ffffff;
+        font-weight: 400;
+    }
+
+    .presentation-img1 img {
+        width: 800px;
+        height: 100%;
+    }
+
+    .search-content {
+        margin-left: 20px;
+    }
+
+    .search-container {
+        display: flex;
+        padding: 20px ;
+        background-color: #ffffff;
+        border: 2px solid #FFA665;
+        border-radius: 50px;
+    }
+
