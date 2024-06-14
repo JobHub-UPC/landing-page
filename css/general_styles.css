@@ -23,8 +23,7 @@ body {
     background-color: #ffffff;
     display: flex;
     min-height: 95px; /*altura mínima*/
-    justify-content: space-between;
-    align-items: center;    
+   
     width: 100%;
 }
 
@@ -49,29 +48,20 @@ img {
     display: flex;
     color: #000000;    
     font-family: 'Poppins', bold;
-    align-items: center;
-    margin-right: 30px;
+
+    margin-left: 30px;
     font-size: 30px;
     font-weight: 700;
 }
 
+
 .menu .navbar ul {
     display: flex;
     align-items: center;
+    text-align: right;
+
 }
 
-.menu .navbar ul li {
-    position: relative;
-    float: left;
-}
-
-.menu .navbar ul li a {
-    font-size: 20px;
-    padding: 25px;
-    color: #000000;
-    display: block;
-    font-weight: 500;
-}
 
 #menu {
     display: none;
@@ -106,6 +96,7 @@ img {
 }
 
 .btnUnirse {
+
     margin-left: 20px;
     background-color: #285C7A;
     border: 2px solid transparent; /* borde transparente */

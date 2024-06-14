@@ -11,13 +11,14 @@
 .information-first {
     color: #9A351B;
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .information-second {
     margin-top: 30px;
     color: #9A351B;
     font-size: 30px;
+    font-weight: 400;
 }
 
 .information-third {
@@ -59,6 +60,6 @@
 
 .information-info button {
     text-align: center;
-    margin-left: 0;
-    width: auto; /* Ajustar el ancho del botón al tamaño del texto */
+    justify-content: center;
+    width: 300px; 
 }
